@@ -47,28 +47,34 @@ cd PINN_Newton
 pip install -r requirements.txt
 ```
 
-## Usage
-
-Open `pinn_newton_second_law.ipynb` in Jupyter or Google Colab and run all cells. The notebook trains the PINN, then plots displacement, velocity and acceleration over time.
-
-To try a different problem, edit `m`, `force(t)`, `initial_displacement` and `initial_velocity`.
-
 ## Results
 
 ### Displacement
+
+
 ![Displacement](results/displacement.png)
 
+
+
 ### Velocity
+
+
 ![Velocity](results/velocity.png)
 
+
+
 ### Acceleration
+
+
 ![Acceleration](results/acceleration.png)
+
+
 
 ## Project structure
 
 ```
 PINN_Newton/
-├── pinn_newton_second_law.ipynb
+├── pinn_newton.py
 ├── requirements.txt
 ├── results/
 │   ├── displacement.png
@@ -79,4 +85,17 @@ PINN_Newton/
 
 ## Ideas for extension
 
-- [ ] Constant and time-dependent forces, e.g. `F(t) =
+- [ ] Constant and time-dependent forces, e.g. `F(t) = sin(t)`
+- [ ] Spring force (harmonic oscillator)
+- [ ] Damping and driven oscillators
+- [ ] Compare against analytical solutions and report the error
+- [ ] Inverse problems (infer an unknown force from data)
+
+## Acknowledgements
+
+- [DeepXDE](https://github.com/lululxvi/deepxde) by Lu Lu et al.
+- Raissi, Perdikaris & Karniadakis, *Physics-informed neural networks* (2019)
+
+## License
+
+This project is licensed under the MIT License.
